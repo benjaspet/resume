@@ -1,0 +1,211 @@
+%-------------------------
+% Ben's Resume in Latex
+% Inspired by: Jake's Resume
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+%----------FONT OPTIONS----------%
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage[a4paper, left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\Large\scshape
+}{}{0em}{}[\color{black}\titlerule \vspace{5pt}]
+
+% Ensure the generated PDF is ATS readable.
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-10pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-15pt}
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%-----------HEADER SECTION-----------%
+\begin{center}
+    {\Huge \scshape Benjamin Petrillo} \\ \vspace{1pt}
+    \href{mailto:benpetrillo.bp@gmail.com}{benpetrillo.bp@gmail.com} - \href{https://linkedin.com/in/ben-petrillo}{linkedin.com/in/ben-petrillo} - \href{https://github.com/benjaspet}{github.com/benjaspet} - \href{https://benpetrillo.dev}{benpetrillo.dev} \\ 
+    {Available: May - December 2025} 
+    \vspace{-12pt}
+\end{center}
+
+%-----------EDUCATION SECTION-----------%
+\section{Education}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Northeastern University}{Boston, MA}
+        {Candidate for a Bachelor of Science in Computer Science}
+        {Sep 2022 – Expected May 2026}
+    \resumeSubHeadingListEnd
+    \vspace{-15pt}
+    \begin{itemize}[leftmargin=0.0in, label={}]
+        \small{\item{
+            \textbf{Honors: }{Dean's List} – \textbf{GPA: }{3.65/4.00} \\
+            \textbf{Coursework: }{Data Structures \& Algorithms, Object-Oriented Design, Distributed Systems, Computer Systems} \\
+        }}
+    \end{itemize}
+    \vspace{-20pt}
+
+%-----------TECHNICAL SKILLS SECTION-----------%
+\section{Technical Skills}
+ \vspace{-10pt}
+ \begin{itemize}[leftmargin=0.0in, label={}]
+    \small{\item{
+     \textbf{Languages: }{Java, Go, TypeScript/JavaScript, Python, HTML/CSS, C++} \\
+     \textbf{Frameworks: }{React, React Native, Next.js, Spring Boot, FastAPI, Node.js, Docker, Terraform, JUnit, Jest} \\
+     \textbf{Technologies: }{AWS EC2, PostgreSQL, MongoDB, Prisma, Firebase, Git, Jetbrains IDE, Postman}
+    }}
+ \end{itemize}
+ \vspace{-20pt}
+
+%-----------EXPERIENCE SECTION -----------%
+\section{Experience}
+    \resumeSubHeadingListStart
+        \resumeSubheading 
+        {Generate Product Development}{Boston, MA}
+        {Software Technical Lead}{Dec 2024 – Present}
+        \vspace{5pt}
+        \resumeSubSubheading {Software Engineer}{Sep – Dec 2024}
+        \resumeItemListStart
+            \resumeItem{Lead a team of 6 engineers in the development of a mobile app for a real client using React Native and Golang}
+            \resumeItem{Review 150+ applications and conduct 7 technical interviews for potential engineers, ensuring fair evaluation}
+            \resumeItem{Develop $\sim$18 CRUD endpoints for authentication, user profiles, and venue interactions for a nightlife platform}
+            \resumeItem{Utilize react-navigation to create mobile navigation stacks, leveraging Supabase and JWTs for user auth}
+            \resumeItem{Complete weekly scrum sprints with an agile team of 12 to adhere to ambitious project deadlines \& code reviews}
+        \resumeItemListEnd
+        \vspace{10pt}
+        \resumeSubheading
+        {FirstGlance by Literally Helping Startups}{Boston, MA}
+        {Software Engineer Co-op}{Sep – Dec 2024}
+        \resumeItemListStart
+            \resumeItem{Develop and maintain 25 OpenAPI-compliant REST endpoints with FastAPI, enforcing strict type validation}
+            \resumeItem{Create 30+ React components based on Figma designs for a metric-based startup discovery platform in Next.js}
+            \resumeItem{Transition legacy infrastructure with raw Firebase queries to PostgreSQL with secure, endpoint-protected access}
+            \resumeItem{Leverage pytest and bun-test to develop performance and API-level test suites, achieving 88\% coverage}
+            \resumeItem{Utilize Terraform to automate software deployment to AWS EC2 instances, adhering to IaC best practices}
+        \resumeItemListEnd
+        \vspace{10pt}
+        \resumeSubheading
+        {Khoury College of Computer Sciences}{Boston, MA}
+        {Teaching Assistant – CS3500 and CS2510}{Jan – Jul 2024}
+        \resumeItemListStart
+            \resumeItem{Direct 5 lab sections of 40+ students, conducting lecture-style sessions on software development best practices}
+            \resumeItem{Grade 30+ assignments and lab activities weekly, collaborating with professors on grading rubrics and activities}
+            \resumeItem{Hold office hours for one-on-one mentoring on software engineering, data structures, and MVC patterns}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS SECTION-----------%
+\section{Projects}
+    \vspace{-15pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Fragro} – \emph{Rust, TypeScript, Next.js, PostgreSQL, TailwindCSS, shadcn/ui}}{Dec 2024 – Present}
+            \resumeItemListStart
+                \resumeItem{Developing a full-stack code snippet sharing platform, with cloud syncing and a customizable VSCode extension}
+                \resumeItem{Spearhead landing page, dashboard, lazy loading components using Next.js SSR per Figma \& custom branding }
+                \resumeItem{Streamline auth flow with Auth.js and custom refresh tokens, supporting multiple OAuth 2.0 providers}
+            \resumeItemListEnd
+            \vspace{-15pt}
+        \resumeProjectHeading
+            {\textbf{Nightlife} – \emph{Go, React Native, PostgreSQL, Docker, Supabase}}{Sep – Dec 2024}
+            \resumeItemListStart
+                \resumeItem{Develop a mobile app utilizing the Expo SDK allowing users to rate, review, and discover nearby nightlife venues}
+                \resumeItem{Utilize Google Maps to populate internal PostgreSQL database with data for 3000+ venues across the USA}
+                \resumeItem{Model and design database architecture using Lucidechart, identifying relationships for infrastructure scalability}
+            \resumeItemListEnd
+            \vspace{-15pt}
+        \resumeProjectHeading
+            {\textbf{Hexagonal Reversi} – \emph{Java, Swing, JUnit}}{Nov – Dec 2023}
+            \resumeItemListStart
+                \resumeItem{Leverage MVC design patterns to develop the game Orthello, integrating observer patterns for data encapsulation}
+                \resumeItem{Engineer 200+ sanity, unit, and mock tests to ensure code correctness, find edge cases, and validate design choices}
+                \resumeItem{Adjust to introduction of external codebase using adaptor patterns, integrating foreign strategies and coordinates}
+            \resumeItemListEnd
+            \vspace{-15pt}
+        \resumeProjectHeading
+            {\textbf{Elixir Music} – \emph{Java, Lavalink, Javalin, TypeScript, MongoDB}}{May 2022 – Aug 2024}
+            \resumeItemListStart
+                \resumeItem{Develop a multithreaded Discord music application on an agile team serving 350,000+ users \& 500+ servers}
+                \resumeItem{Leverage multithreading for concurrent audio streams across voice channel clusters with Lavalink audio managers}
+                \resumeItem{Implement a custom playlist API with CRUD operations using MongoDB and bearer token authentication}
+            \resumeItemListEnd
+            \vspace{-15pt}
+    \resumeSubHeadingListEnd
+    \vspace{0pt}
+
+\end{document}
