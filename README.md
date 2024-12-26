@@ -1,2 +1,2 @@
-# resume
-my resume, written in Latex
+# Ben's Resume – Latex
+My personal resume, written in Latex.
